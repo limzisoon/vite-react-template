@@ -1,5 +1,7 @@
 // File: src/components/MaintenanceForm.tsx
 import React, { useState } from "react";
+import "./App.css";
+import carLogo from "./assets/car_logo.jpg";
 
 interface CarDetails {
   make: string;
@@ -46,6 +48,12 @@ const MaintenanceForm: React.FC = () => {
 
   return (
     <form onSubmit={handleSubmit}>
+
+    <div>
+    				<a href="" target="_blank">
+    					<img src={carLogo} className="logo" alt="car Logo" />
+    				</a>
+    				</div>
       <div>
         <label>Make:</label>
         <input type="text" name="make" value={carDetails.make} onChange={handleChange} required />
